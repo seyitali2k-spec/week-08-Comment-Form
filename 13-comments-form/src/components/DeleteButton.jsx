@@ -3,7 +3,6 @@
 export default function DeleteButton({ id }) {
 
 async function handleDelete() {
-
     await fetch(`/api/posts/${id}`, {
     method: "DELETE",
     });
@@ -12,7 +11,10 @@ async function handleDelete() {
 }
 
 return (
-    <button onClick={handleDelete}>
+    <button
+    onClick={handleDelete}
+    className="text-red-500 hover:text-red-700"
+    >
     Delete
     </button>
 );
